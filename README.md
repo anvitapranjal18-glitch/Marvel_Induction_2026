@@ -27,8 +27,17 @@
 17. [Task 19: Make a Web app](#task-19)
 
 ---
+## 📌 Task Navigation
 
-## 🚀 Task 5: Professional Portfolio
+| Task | Title | Documentation |
+| :--- | :--- | :--- |
+| **Task 1** | Physics & ECE Theory | [View Report](./Task1.md) |
+| **Task 2** | Weather API Integration | [View Report](./Task2.md) |
+| **Task 3** | Git & GitHub Workflow | [View Report](./Task3.md) |
+| **Task 4** | Ubuntu CLI & Automation | [View Report](./Task4.md) |
+| **Task 5** | **Live Portfolio Website** | [**Visit Live Site**](https://anvitapranjal18-glitch.github.io/Marvel_Induction_2026/) |
+| **Task 6** | Technical Writing (Markdown) | [View Article](./Task6.md) |
+| **Task 7** | Ultrasonic Radar System | [View Simulation](./Task7.md) |## 🚀 Task 5: Professional Portfolio
 For the final task, I developed a responsive portfolio website to showcase my skills, interests, and the work I completed during this induction.
 
 * **Live Link:** [View My Portfolio](https://anvitapranjal18-glitch.github.io/Marvel_Induction_2026/)
