@@ -1,71 +1,45 @@
-## **Task 11: IoT Integration — ESP32 Web Server Control**
-
-### **Description**
-
-The core objective of this task was to transcend local hardware control by developing a standalone **IoT Web Server** using the **ESP32 development board**. Unlike the Arduino Uno, the ESP32 features an integrated Wi-Fi stack, enabling it to host a website that can be accessed by any device on the same network. This task involved programming the board to handle **Asynchronous HTTP Requests**, allowing for the remote toggling of a physical LED via a browser-based UI. This project serves as a foundational exercise in **Full-Stack Embedded Engineering**, bridging the gap between web interfaces and hardware actuators.
-
-### **Detailed Process**
-
-- **Network Handshake & Station Mode:** I initiated the task by configuring the ESP32 in **Station (STA) Mode**. I used the `WiFi.h` library to pass my local SSID and Password to the board. I implemented a `while` loop to poll the connection status, ensuring the code only proceeded once a local IP address was successfully assigned by the router.
-  ```cpp
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
-  ```
-- **HTML/CSS UI Injection:** To create a user interface without an external hosting service, I embedded a raw HTML string within the Arduino sketch. This string included CSS for styling buttons and the logic for the browser to send GET requests to the ESP32's IP address.
-- **Route Handling & GPIO Execution:** I utilized the `WebServer.h` library to define "Routes" or endpoints. I mapped the `/H` URL path to a function that sets the LED pin to `HIGH` and the `/L` path to a function that sets it to `LOW`.
-  ```cpp
-  // Server endpoint for turning the LED ON
-  server.on("/H", []() {
-    digitalWrite(ledPin, HIGH);
-    server.send(200, "text/html", "<h1>LED is ON</h1><a href='/L'>Turn OFF</a>");
-  });
-  ```
-- **Real-time Debugging & Testing:** Once the server was live, I accessed the IP address from my mobile phone. I monitored the **Serial Monitor** at 115200 baud to track incoming HTTP headers and ensured that the ESP32 handled the requests without crashing or dropping the Wi-Fi connection.
-
-### **Control Logic Table**
-
-| Component        | Function          | Communication Type   | Pin / State             |
-| :--------------- | :---------------- | :------------------- | :---------------------- |
-| **ESP32 SoC**    | Host Server       | Wi-Fi (802.11 b/g/n) | Station Mode            |
-| **HTTP Request** | User Action       | GET Method           | URL Endpoint (/H or /L) |
-| **LED**          | Physical Actuator | Digital Output       | GPIO 2 (Built-in)       |
-| **Router**       | Gateway           | DHCP                 | Local IP Assignment     |
-
-### **Technical Skills Gained**
-
-- **📡 Wireless Stack Management:** Mastered the process of connecting microcontrollers to local networks and managing IP telemetry.
-- **🌐 Web-to-Hardware Interfacing:** Understanding how the HTTP request-response cycle can be used to trigger physical electrical signals.
-- **🔌 Asynchronous Programming:** Learning to design code that listens for network traffic while simultaneously maintaining the hardware state.
-- **🛠️ Full-Stack Prototyping:** Gaining the ability to write HTML/CSS code that lives entirely within a C++ microcontroller environment.
+# Task 11: LED Toggle via ESP32 Web Server
 
 ---
 
-## **Task 12: Advanced Soldering & PCB Component Assembly**
+### 1. Objective
+To control an LED wirelessly from a phone or laptop. The ESP32 hosts a simple website; clicking buttons on the site sends a signal to the ESP32 to turn the LED on or off.
 
-### **Description**
-
-The core objective of this task was to master the high-precision skill of **Soldering**, which is essential for transforming a temporary breadboard circuit into a permanent, ruggedized electronic device. This involved using a **Soldering Iron** to melt a filler metal (Solder) onto a **Printed Circuit Board (PCB)** to create a joint that is both electrically conductive and mechanically strong. The task emphasized the physics of thermal conduction, flux activation, and the proper sequence of through-hole component assembly.
-
-### **Detailed Process**
-
-- **Workstation Preparation & Safety:** I began by setting up a safe environment, including a fume extractor and a stable iron stand. I calibrated the soldering iron to approximately **350°C** and "tinned" the tip with a fresh layer of solder to prevent oxidation and ensure the fastest possible heat transfer to the PCB pads.
-- **The "Through-Hole" Soldering Cycle:** I developed a disciplined, repeatable process for each joint to ensure consistency and avoid damage to the components:
-  1. **Alignment:** I inserted the component leads through the PCB and bent them slightly to hold the part flush against the board.
-  2. **Heating:** I applied the iron tip to the junction of the lead and the copper pad for exactly 2 seconds.
-  3. **Feeding:** I introduced the solder wire to the _joint_, allowing the flux to clean the surface and the solder to "wick" around the lead.
-  4. **Trimming:** Once cooled, I used diagonal cutters to snip the excess lead just above the solder cone.
-- **Visual Audit & Troubleshooting:** I inspected every joint under a magnifying glass. I specifically looked for the **"Shiny Concave Cone"** shape. I identified a few "Dry Joints" (caused by moving the lead before the solder cooled) and corrected them by reapplying heat and a small amount of fresh flux.
-- **Layered Assembly Strategy:** To keep the board manageable, I followed the "Lowest-Profile-First" rule. I soldered all resistors and diodes first, followed by IC sockets, and finally taller components like electrolytic capacitors and terminal blocks.
-
-### **Technical Skills Gained**
-
-- **🔥 Thermal Precision:** Learning the exact timing required to melt solder without "lifting" the copper pads or overheating sensitive semiconductors.
-- **🏗️ Mechanical Reliability:** Understanding how a proper solder fillet provides structural support, preventing electrical failures due to vibration.
-- **⚠️ Lab Safety Protocols:** Strict adherence to safety measures regarding lead exposure, high-temperature tools, and chemical fumes.
-- **🔍 Hardware Debugging:** Developing the ability to visually diagnose circuit failures caused by solder bridges or cold joints.
+### 2. The Components (The Team)
+* **ESP32:** The "brain" with built-in Wi-Fi. It runs the website.
+* **LED:** The light we want to control (the "worker").
+* **Resistor:** Limits electricity to protect the LED (the "safety").
+* **USB Cable:** Provides power and uploads the code (the "umbilical cord").
 
 ---
+
+### 3. Basic Connections (Where the Wires Go)
+These connections complete the electrical circuit, allowing the ESP32 to send "HIGH" or "LOW" signals to the LED.
+
+| Connection | Wires | Where they go |
+| :--- | :--- | :--- |
+| **Signal (ON/OFF)** | Brown Wires | ESP32 GPIO 2 $\rightarrow$ LED Long Leg |
+| **Return Path (GND)**| Yellow Wire | ESP32 GND $\rightarrow$ Breadboard $\rightarrow$ LED Short Leg |
+| **Protection** | Resistor | Between LED and wires (prevents burnout) |
+
+---
+
+### 4. Lab Setup Visualization
+Below are images showing the physical setup from the lab, as referenced in the discussion.
+
+![Complete Lab Setup and Laptop](./lab_setup.jpg)
+*Figure 1: Overall view of the ESP32, breadboard, LEDs, and connection to the laptop.*
+
+
+---
+
+### 5. How it Works (The Main Gist)
+1. **The Handshake:** The ESP32 connects to the Wi-Fi. It is assigned a unique number called an **IP Address**.
+2. **The Server:** The ESP32 hosts a tiny web page. Typing the **IP Address** into a phone's browser shows "ON" and "OFF" buttons.
+3. **The Trigger:** Clicking a button sends a request. The ESP32 receives it and sends electricity (HIGH signal) to **GPIO Pin 2**, lighting the LED.
+
+### 6. Senior Summary (What to Say)
+> "In Task 11, I built a wireless light switch. I programmed the ESP32 to connect to my Wi-Fi and host a simple website. When I clicked the buttons on my phone screen, the ESP32 received the command and toggled the **GPIO Pin 2** (the signal pin) and used the **GND** (yellow wire) for the return path to successfully turn the LED on or off."
+
+---
+*Submitted by: Anvita Pranjal | UVCE ECE 2nd Sem*
