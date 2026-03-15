@@ -30,25 +30,24 @@ An **API (Application Programming Interface)** acts as a digital bridge between 
 ### 5. Visual Evidence (Proof of Work)
 
 #### A. Source Code Structure
-*Below is a screenshot of the HTML and JavaScript implementation.*
-![Source Code](./code.png) 
-*(Note: Upload your code screenshot as 'code.png' to your GitHub repo)*
+*Below is the HTML and JavaScript implementation across multiple segments.*
+![Code Part 1](./code1.png) 
+![Code Part 2](./code2.png) 
 
 #### B. Functional User Interface
 *The app successfully fetching and displaying live weather data.*
-![App UI](./ui.png)
-*(Note: Upload your app screenshot as 'ui.png' to your GitHub repo)*
+![App UI](./weather_app.png)
 
 #### C. API Network Response (Developer Tools)
 *This proves the real-time data exchange between the browser and the API server.*
-![Network Response](./network.png)
-*(Note: Upload your network tab screenshot as 'network.png' to your GitHub repo)*
+![Network Part 1](./network1.png)
+![Network Part 2](./network2.png)
 
 ---
 
 ### 6. Challenges & Solutions
 * **Challenge:** Handling invalid city names or API errors.
-* **Solution:** Implemented a `try...catch` block in JavaScript to alert the user if a city is not found or if the network fails.
+* **Solution:** Implemented a `try...catch` block in JavaScript to alert the user if a city is not found.
 * **Challenge:** The temperature unit was default to Kelvin.
 * **Solution:** Appended `&units=metric` to the API request to receive data in Celsius automatically.
 
