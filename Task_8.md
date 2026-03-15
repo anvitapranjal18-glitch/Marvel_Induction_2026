@@ -3,29 +3,49 @@
 ---
 
 ### 1. Objective
-To interface a DC BO (Battery Operated) motor with an Arduino Uno via an L298N Dual H-Bridge driver and implement speed control using Pulse Width Modulation (PWM).
+To interface a DC BO (Battery Operated) motor with an Arduino Uno via an L298N Dual H-Bridge driver and implement variable speed control using Pulse Width Modulation (PWM).
 
-### 2. Hardware Setup
-As shown in the lab documentation, a regulated **DC Power Supply** was used to provide a stable **12V** input to the motor driver. This ensures consistent torque and protects the Arduino from high current draw.
-
-* **Controller:** Arduino Uno
-* **Driver:** L298N H-Bridge (with integrated heat sink for thermal management)
+### 2. Hardware Components
+* **Controller:** Arduino Uno (The "Brain")
+* **Driver:** L298N H-Bridge (The "Muscle")
 * **Actuator:** 5V-9V Yellow BO Motor
 * **Power Source:** External DC Power Supply (Set to 12.0V)
 
-### 3. Circuit Implementation
-The L298N module acts as the power interface. The Arduino sends low-power logic signals to the driver's input pins, which then switches the high-power 12V supply to the motor.
+---
 
-![Lab Setup - Hardware Implementation](./lab_setup_1.jpg)
+### 3. Connection Mapping
+To ensure the system works correctly, a **Common Ground** was established between the Power Supply, L298N, and Arduino.
+
+| Component | Pin Label | Connected To | Function |
+| :--- | :--- | :--- | :--- |
+| **L298N** | 12V | Power Supply (+) | Main Power Input |
+| **L298N** | GND | Power Supply (-) & Arduino GND | Common Reference |
+| **L298N** | ENA | Arduino Pin 9 (PWM) | Speed Control (Throttle) |
+| **L298N** | IN1 | Arduino Pin 8 | Direction Control (A) |
+| **L298N** | IN2 | Arduino Pin 7 | Direction Control (B) |
+| **Motor** | Terminal 1 & 2 | L298N OUT1 & OUT2 | Power Output to Motor |
 
 ---
 
-### 4. Technical Concepts
-* **PWM Speed Control:** By using the `analogWrite()` function on the Enable pin (ENA), we vary the duty cycle of the motor's power.
-* **H-Bridge Logic:** By toggling IN1 and IN2 pins between HIGH and LOW, we can reverse the direction of the motor's rotation.
-* **Common Ground:** The Ground (GND) of the DC Power Supply, L298N, and Arduino are all tied together to create a common reference point for signals.
+### 4. Lab Setup Visualization
+Below is the hardware implementation as captured during the lab session:
 
-### 5. Observations
-The motor began rotating when the PWM value exceeded approximately 70. Full speed was achieved at a value of 255. The L298N remained cool during operation due to the efficient heat sink design.
+![Hardware Connections and Power Supply Setup](./lab_setup_1.jpg)
+*Figure 1: Overall circuit connection with the 12V DC Power Supply.*
+
+
 
 ---
+
+### 5. Technical Logic
+* **Speed Control:** Accomplished via `analogWrite(9, value)`. The Arduino uses **PWM** to flicker the power on and off at high frequencies, simulating a variable analog voltage.
+* **Direction Control:** Accomplished via `digitalWrite()`. 
+    * **Forward:** IN1=HIGH, IN2=LOW.
+    * **Backward:** IN1=LOW, IN2=HIGH.
+* **H-Bridge Function:** The L298N uses internal switches to reverse the polarity of the voltage, allowing the motor to spin in both directions.
+
+### 6. Observations & Results
+The motor's speed was successfully varied from a minimum starting threshold (PWM ~70) to maximum velocity (PWM 255). The 12V power supply provided sufficient torque, and the L298N efficiently handled the current without excessive heating.
+
+---
+*Submitted by: Anvita Pranjal | UVCE ECE 2nd Sem*
