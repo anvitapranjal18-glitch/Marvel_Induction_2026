@@ -48,4 +48,4 @@ Below is the hardware implementation as captured during the lab session:
 The motor's speed was successfully varied from a minimum starting threshold (PWM ~70) to maximum velocity (PWM 255). The 12V power supply provided sufficient torque, and the L298N efficiently handled the current without excessive heating.
 
 ---
-*Submitted by: Anvita Pranjal | UVCE ECE 2nd Sem*
+
