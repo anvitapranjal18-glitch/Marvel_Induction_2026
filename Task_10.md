@@ -1,4 +1,4 @@
-## **Task 10: Speed Control of DC Motor using L298N & Arduino**
+## **Task 8: Speed Control of DC Motor using L298N & Arduino**
 
 ### **Description**
 
