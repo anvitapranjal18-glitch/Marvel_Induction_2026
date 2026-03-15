@@ -1,51 +1,44 @@
-## Task 1: 3D Printing & Precision Calibration {#task-1}
+# Task 1: 3D Printing & Articulated Motion Calibration
 
 ### 1. Objective
+To master the FDM (Fused Deposition Modeling) workflow by printing a **Flexi-Rex** (Articulated T-Rex). This project serves as a test for the printer’s ability to handle small clearances, ensuring that moving segments do not fuse together during the extrusion process.
 
-To master the FDM (Fused Deposition Modeling) workflow by calibrating a 3D printer and producing a **20mm XYZ Calibration Cube** to verify dimensional accuracy.
+### 2. The Model: Flexi-Rex
+* **Purpose:** To verify printer tolerances, bed adhesion for small footprints, and cooling efficiency.
+* **Design:** A "Print-in-Place" model with interlocking joints that move freely immediately after printing.
+* **Source:** Thingiverse / Printables.
 
-### 2. The Model: XYZ Calibration Cube
+### 3. Slicing Parameters (Ultimaker / Creality Slicer)
+For an articulated print, the "Golden Settings" focus on strength and preventing joint fusion.
 
-- **Purpose:** To check if the printer's motors are moving the correct distance.
-- **Dimensions:** 20mm x 20mm x 20mm.
-- **Source:** Downloaded STL from Thingiverse/Printables.
+| Parameter | Value | Reason |
+| :--- | :--- | :--- |
+| **Layer Height** | 0.2 mm | Standard balance; keeps joint gaps clean. |
+| **Wall Line Count** | 3 | Increases the structural integrity of the small joint links. |
+| **Infill Density** | 15% | Provides enough internal support without excessive weight. |
+| **Print Speed** | 45 mm/s | Reduced speed prevents vibration-induced errors on small parts. |
+| **Printing Temp** | 200°C | Optimal flow for PLA to prevent stringing between joints. |
+| **Build Plate Temp** | 60°C | Ensures the small segments (feet/tail) stay stuck to the bed. |
+| **Initial Layer Speed**| 20 mm/s | Guarantees a strong "foundation" for the articulated parts. |
 
-### 3. Slicing Parameters (Using Ultimaker/Creality Slicer)
-
-For this specific print, I used the following "Golden Settings" for PLA filament:
-
-| Parameter            | Value     | Reason                                                      |
-| :------------------- | :-------- | :---------------------------------------------------------- |
-| **Layer Height**     | 0.2 mm    | Standard balance between speed and detail.                  |
-| **Wall Line Count**  | 2 or 3    | Ensures the cube is sturdy enough to measure with calipers. |
-| **Infill Density**   | 10% - 15% | Enough to support the top roof of the cube.                 |
-| **Print Speed**      | 50 mm/s   | Prevents ghosting or vibrations on the letters.             |
-| **Printing Temp**    | 200°C     | Ideal melting point for most PLA brands.                    |
-| **Build Plate Temp** | 60°C      | Prevents "warping" (corners peeling up).                    |
+---
 
 ### 4. Step-by-Step Workflow
 
-1.  **File Preparation:** Imported the `XYZ_Cube.stl` into the Slicer.
-2.  **G-Code Generation:** Clicked "Slice" to see the estimated print time (~30-45 mins) and saved the `.gcode` file to a microSD card.
-3.  **Printer Setup:** Cleaned the glass bed with isopropyl alcohol and loaded the PLA filament.
-4.  **Leveling:** Performed a manual bed leveling to ensure the nozzle was exactly the "paper-width" distance from the bed.
-5.  **Execution:** Started the print and monitored the first layer closely.
+1. **File Preparation:** Imported `FlexiRex.stl` into the Slicer. Checked the "Slice Preview" to confirm that the gaps between the joints were visible.
+2. **G-Code Generation:** Exported the `.gcode` to a microSD card.
+3. **Printer Setup:** Thoroughly cleaned the bed with IPA (Isopropyl Alcohol). Since the Flexi-Rex has many small contact points, even a fingerprint can cause a part to peel off.
+4. **Bed Leveling:** Verified the "Z-offset" was perfect to ensure the first layer squish was sufficient for the tiny leg segments.
+5. **Execution:** Started the print and monitored the first 3 layers (the most critical phase for articulated models).
 
 ---
 
-### 5. Visual Evidence (Photos)
 
-> **[INSERT PHOTO 1: Screenshot of the sliced cube in Cura showing the layers]**
 
-> **[INSERT PHOTO 2: The finished 20mm cube sitting on the print bed]**
+
 
 ### 6. Post-Print Analysis
 
-After the print finished, I used a digital caliper to measure the axes:
-
-- **X-Axis:** [Measure it] mm
-- **Y-Axis:** [Measure it] mm
-- **Z-Axis:** [Measure it] mm
-- **Observation:** (Example: "The Z-axis was perfect, but X was off by 0.1mm, indicating a belt might need tightening.")
-
----
+* **Articulation Check:** All segments (head, body, tail) move smoothly. The joints did not fuse.
+* **Bed Adhesion:** No "warping" was observed, and even the smallest tail segments remained attached until the print was complete.
+* **Tolerance:** The gaps between the joints are clean, indicating that the retraction settings and cooling fan are functioning correctly.
