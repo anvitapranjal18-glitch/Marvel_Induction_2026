@@ -28,7 +28,7 @@ These connections complete the electrical circuit, allowing the ESP32 to send "H
 Below are images showing the physical setup from the lab, as referenced in the discussion.
 
 ![Complete Lab Setup and Laptop](./lab_setup.jpg)
-*Figure 1: Overall view of the ESP32, breadboard, LEDs, and connection to the laptop.*
+
 
 
 ---
@@ -42,4 +42,3 @@ Below are images showing the physical setup from the lab, as referenced in the d
 > "In Task 11, I built a wireless light switch. I programmed the ESP32 to connect to my Wi-Fi and host a simple website. When I clicked the buttons on my phone screen, the ESP32 received the command and toggled the **GPIO Pin 2** (the signal pin) and used the **GND** (yellow wire) for the return path to successfully turn the LED on or off."
 
 ---
-*Submitted by: Anvita Pranjal | UVCE ECE 2nd Sem*
