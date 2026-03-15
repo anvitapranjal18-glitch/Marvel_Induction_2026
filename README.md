@@ -31,7 +31,7 @@
 
 | Task | Title | Documentation |
 | :--- | :--- | :--- |
-| **Task 1** | Physics & ECE Theory | [View Report](./Task1.md) |
+| **Task 1** | Task 1: 3D Printing & Design| [View Report](./Task1.md) |
 | **Task 2** | Weather API Integration | [View Report](./Task2.md) |
 | **Task 3** | Git & GitHub Workflow | [View Report](./Task3.md) |
 | **Task 4** | Ubuntu CLI & Automation | [View Report](./Task4.md) |
