@@ -1,52 +1,33 @@
-## **Task 6: The Matrix Puzzle — Decoding with NumPy & Matplotlib**
-
-### **Description**
-
-The core objective of this task was to solve a visual cryptographic puzzle by manipulating a scrambled dataset using **NumPy** and **Matplotlib**. The challenge involved taking a raw, 1D encoded array and applying a series of mathematical transformations—including **dimensional reshaping**, **transposition**, and **axial flipping**—to reveal a hidden image. This task emphasizes the power of vectorized operations and the relationship between numerical matrices and digital image visualization.
-
-### **Detailed Process**
-
-- **Data Acquisition & Shape Analysis:** I began by loading the scrambled matrix. To determine the target dimensions, I calculated the total number of elements ($N$). Following the clue to "reshape into a square," I derived the side length ($s$) using $s = \sqrt{N}$.
-
-  ```python
-  import numpy as np
-  import matplotlib.pyplot as plt
-
-  # Loading the data
-  data = np.load('scrambled_matrix.npy')
-  size = int(np.sqrt(data.size))
-  matrix = data.reshape((size, size))
-  ```
-
-- **Decoding via Matrix Manipulation:** Based on the cryptic clues provided, I applied a sequence of NumPy transformations to "de-scramble" the visual data:
-  1. **Orientation Correction:** The clue _"data might be sideways"_ suggested a **Transpose** operation to swap rows and columns.
-  2. **Positional Realignment:** The clue _"the end is actually the beginning"_ indicated a **Flip** operation, reversing the order of elements along a specific axis.
-  ```python
-  # Correcting orientation and mirroring
-  decoded_matrix = np.transpose(matrix)
-  decoded_matrix = np.flip(decoded_matrix, axis=1) # Horizontal flip
-  ```
-- **Visualization & Rendering:** Once the matrix was mathematically restored, I utilized `matplotlib.pyplot.imshow()` to render the numerical array as a grayscale/RGB image. I experimented with different colormaps (`cmap='gray'`) to ensure the hidden image was clearly visible.
-  ```python
-  plt.imshow(decoded_matrix, cmap='magma')
-  plt.title("Revealed Secret Image")
-  plt.axis('off') # Clean report presentation
-  plt.show()
-  ```
-
-### **Decoding Logic (The Clues)**
-
-| Clue                              | Technical Interpretation           | NumPy Function Used     |
-| :-------------------------------- | :--------------------------------- | :---------------------- |
-| _"Reshape into a square"_         | Convert 1D array to 2D $(s, s)$    | `np.reshape()`          |
-| _"Data might be sideways"_        | Swap the X and Y axes              | `np.transpose()` / `.T` |
-| _"End is actually the beginning"_ | Reverse the elements along an axis | `np.flip()`             |
-
-### **Technical Skills Gained**
-
-- **Dimensional Intelligence:** Mastering the transition between flat data arrays and multi-dimensional structures.
-- **Vectorized Transformations:** Efficiently reorienting large datasets without using nested `for` loops, significantly reducing computational overhead.
-- **Data Visualization:** Learning to interpret 2D arrays not just as numbers, but as spatial data that can be plotted and analyzed visually.
-- **Algorithmic Debugging:** Applying logical deductions to solve "black box" data puzzles through trial, error, and mathematical properties.
+# Task 6: Technical Writing & Resource Documentation
 
 ---
+
+## 1. Overview
+The objective of this task was to master **Markdown** to create high-quality, device-agnostic technical documentation. Markdown allows for structured formatting—such as hierarchical headings and data tables—using plain text.
+
+## 2. Featured Article: Understanding DNS Resolution
+When a user enters a URL, the browser initiates a **Recursive DNS Lookup**. This process follows a specific hierarchy to translate a domain name into an IP address:
+
+1. **Root Nameserver**
+2. **TLD Nameserver** (.com, .org, .edu)
+3. **Authoritative Nameserver** (the final source of truth)
+
+---
+
+## 3. Technical Stack & Tools Used
+| Feature | Markdown Syntax | Purpose |
+| :--- | :--- | :--- |
+| **Hierarchy** | `#`, `##`, `###` | Defines document structure. |
+| **Emphasis** | `**text**`, `*text*` | Highlights key technical terminology. |
+| **Code** | ` ```bash ` | Provides copy-pasteable terminal commands. |
+| **Tables** | `| -- |` | Organizes comparative technical data. |
+
+---
+
+## 4. Technical Skills Gained
+* **Documentation Engineering:** Learning to write for a technical audience by balancing brevity with deep-dive explanations.
+* **Markup Proficiency:** Gaining "Device Agnostic" formatting skills, ensuring content looks identical on mobile and desktop.
+* **Information Architecture:** Mastering the art of breaking down complex system designs into digestible sections.
+
+---
+*Created for MARVEL Induction | UVCE ECE 2nd Sem*

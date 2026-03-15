@@ -1,51 +1,40 @@
-## **Task 7: Professional Portfolio Development & Responsive Web Design**
-
-### **Description**
-
-The core objective of this task was to design and deploy a comprehensive, **responsive portfolio website** to serve as a digital identity and project showcase. This involved implementing a modern UI/UX architecture using **HTML5**, **CSS3**, and potentially a framework (like **Bootstrap** or **Tailwind**). The focus was on cross-platform compatibility—ensuring the site maintains high usability across mobile, tablet, and desktop viewports—and integrating version control via **Git** for hosting and continuous deployment.
-
-### **Detailed Process**
-
-- **Conceptualization & Wireframing:** I began by defining the information architecture. The site was structured into modular sections: _Hero/About_, _Technical Skillset_, _Project Gallery_, and _Social Connectivity_. I prioritized a "Mobile-First" design philosophy to ensure core functionality on smaller screens.
-- **Frontend Architecture:** I utilized semantic HTML to improve SEO and accessibility. For styling, I implemented a custom CSS architecture focusing on:
-  - **Flexbox/Grid:** To create a dynamic, non-linear layout that adapts to screen width.
-  - **Media Queries:** To trigger specific styling breakpoints for various device resolutions.
-  ```css
-  /* Example Responsive Breakpoint */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hero-section {
-      flex-direction: column;
-    }
-  }
-  ```
-- **Interactive Elements:** I integrated interactive components such as hover effects, smooth-scroll navigation, and dynamic project cards to enhance user engagement without compromising page load speeds.
-- **Version Control & Deployment:** Once the local build was stabilized, I initialized a Git repository. I managed the project using a standard development-to-production workflow:
-  ```bash
-  git init
-  git add .
-  git commit -m "Finalized responsive portfolio build"
-  git remote add origin [Your-Repo-Link]
-  git push -u origin main
-  ```
-- **Hosting:** The final product was pushed to **GitHub Pages** (or a similar hosting provider), making the portfolio live and accessible via a public URL.
-
-### **Technical Stack**
-
-| Component     | Technology Used    | Purpose                                         |
-| :------------ | :----------------- | :---------------------------------------------- |
-| **Structure** | HTML5              | Semantic content and SEO optimization.          |
-| **Styling**   | CSS3 / [Framework] | Responsive layouts and visual branding.         |
-| **Logic**     | JavaScript         | Smooth scrolling and interactive UI components. |
-| **VCS**       | Git                | Versioning, history tracking, and deployment.   |
-
-### **Technical Skills Gained**
-
-- **Responsive Design (RWD):** Mastered the use of fluid grids and flexible images to build interfaces that work on any device.
-- **Asset Optimization:** Learned to manage high-resolution images and minified code to ensure fast "First Contentful Paint" (FCP) times.
-- **Git Workflow:** Reinforced the habit of atomic commits and remote repository management for live production environments.
-- **UI/UX Principles:** Developed an eye for visual hierarchy, typography, and color theory to create a professional user experience.
+# Task 4: Ultrasonic Radar System with LCD Interface
 
 ---
+
+### 1. Objective
+To design and simulate a radar system that scans a 150-degree field of view using an Ultrasonic Sensor, a Servo Motor, and an I2C LCD for real-time data visualization.
+
+### 2. Components Used
+* **Arduino Uno:** The central microcontroller.
+* **HC-SR04 Ultrasonic Sensor:** To measure distance using sound wave reflection.
+* **Micro Servo Motor:** To rotate the sensor dynamically from 15° to 165°.
+* **I2C LCD (16x2):** To display the current scanning angle and detected distance.
+
+### 3. Circuit Implementation
+The system uses the **LiquidCrystal_I2C** library to simplify the wiring of the display, requiring only two data pins (SDA and SCL) in addition to power. The Ultrasonic sensor is triggered via Pin 9, with the echo received on Pin 10.
+
+![Tinkercad Radar Design](./tinkercad_radar_design.jpg)
+
+---
+
+### 4. Logic & Calculations
+The distance is calculated based on the duration of the reflected sound pulse using the formula:
+$$Distance = \frac{Duration \times 0.034}{2}$$
+
+* **Sweep Range:** The servo is programmed to oscillate between 15° and 165° to ensure stable readings and protect the motor's physical limits.
+* **Real-time Feedback:** Every 50ms, the LCD clears and updates with the latest coordinates of the obstacle.
+
+### 5. Code Snippet (Logic Overview)
+```cpp
+void updateLCD(int angle, int distance) {
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("Angle: ");
+  lcd.print(angle);
+  
+  lcd.setCursor(0,1);
+  lcd.print("Dist: ");
+  lcd.print(distance);
+  lcd.print("cm");
+}
