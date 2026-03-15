@@ -1,38 +1,31 @@
-## **Task 8: Speed Control of DC Motor using L298N & Arduino**
+# Task 8: Speed Control of DC Motor using L298N & Arduino
 
-### **Description**
+---
 
-The core objective of this task was to implement precise speed control for a **5V BO (Battery Operated) Motor** using an **Arduino Uno** and an **L298N H-Bridge Motor Driver**. The project involved understanding the mechanics of **Pulse Width Modulation (PWM)** to vary the effective voltage supplied to the motor without reducing the source voltage. This task bridges the gap between digital logic (Arduino) and high-current mechanical actuators (DC Motors), focusing on both virtual simulation and physical hardware implementation.
+### 1. Objective
+To interface a DC BO (Battery Operated) motor with an Arduino Uno via an L298N Dual H-Bridge driver and implement speed control using Pulse Width Modulation (PWM).
 
-### **Detailed Process**
+### 2. Hardware Setup
+As shown in the lab documentation, a regulated **DC Power Supply** was used to provide a stable **12V** input to the motor driver. This ensures consistent torque and protects the Arduino from high current draw.
 
-- **H-Bridge Architecture (L298N):** I utilized the L298N driver to decouple the Arduino's delicate logic circuitry from the high-current demands of the DC motor. The dual H-Bridge setup allowed for bidirectional control by toggling the `IN1` and `IN2` pins, while the `ENA` (Enable A) pin was used for speed regulation.
-- **PWM Speed Modulation:** Instead of a steady DC signal, I programmed the Arduino to output a **PWM signal** via an analog-capable pin (e.g., Pin 9). By varying the **Duty Cycle** (the ratio of "on" time to "off" time), I controlled the RPM of the motor:
-  - **0% Duty Cycle:** Motor is stationary.
-  - **50% Duty Cycle:** Motor runs at approximately half speed.
-  - **100% Duty Cycle:** Motor runs at maximum rated RPM.
-  ```cpp
-  // Sample Code for Speed Graduation
-  analogWrite(ENA, 150); // Sets speed (0-255)
-  digitalWrite(IN1, HIGH); // Direction A
-  digitalWrite(IN2, LOW);
-  ```
-- **Virtual Prototyping (Tinkercad):** Before hardware assembly, I simulated the circuit in Tinkercad. This step was vital to verify the common ground between the external battery source and the Arduino, preventing potential back-EMF damage to the microcontroller.
-- **Hardware Assembly & Testing:** I transitioned the design to physical hardware using a breadboard, jumper wires, and a 9V battery (regulated through the L298N). I recorded the motor's response to different code parameters, documenting the transition from low-torque starts to full-speed operation.
+* **Controller:** Arduino Uno
+* **Driver:** L298N H-Bridge (with integrated heat sink for thermal management)
+* **Actuator:** 5V-9V Yellow BO Motor
+* **Power Source:** External DC Power Supply (Set to 12.0V)
 
-### **Control Logic Table**
+### 3. Circuit Implementation
+The L298N module acts as the power interface. The Arduino sends low-power logic signals to the driver's input pins, which then switches the high-power 12V supply to the motor.
 
-| Pin (Arduino) | L298N Pin | Function          | Logic Type            |
-| :------------ | :-------- | :---------------- | :-------------------- |
-| **D9 (PWM)**  | ENA       | Speed Control     | Analog Output (0-255) |
-| **D8**        | IN1       | Direction Input 1 | Digital (HIGH/LOW)    |
-| **D7**        | IN2       | Direction Input 2 | Digital (LOW/HIGH)    |
+![Lab Setup - Hardware Implementation](./lab_setup_1.jpg)
 
-### **Technical Skills Gained**
+---
 
-- **PWM Logic:** Mastered the concept of Duty Cycles to simulate variable analog voltage using digital pulses.
-- **Power Isolation:** Understanding why motor drivers are necessary to protect microcontrollers from inductive loads and high current spikes.
-- **H-Bridge Operation:** Learning how to manipulate current flow direction to achieve clockwise and counter-clockwise rotation.
-- **Hardware Debugging:** Troubleshooting common physical issues such as loose connections, insufficient torque, and common-grounding errors.
+### 4. Technical Concepts
+* **PWM Speed Control:** By using the `analogWrite()` function on the Enable pin (ENA), we vary the duty cycle of the motor's power.
+* **H-Bridge Logic:** By toggling IN1 and IN2 pins between HIGH and LOW, we can reverse the direction of the motor's rotation.
+* **Common Ground:** The Ground (GND) of the DC Power Supply, L298N, and Arduino are all tied together to create a common reference point for signals.
+
+### 5. Observations
+The motor began rotating when the PWM value exceeded approximately 70. Full speed was achieved at a value of 255. The L298N remained cool during operation due to the efficient heat sink design.
 
 ---
