@@ -34,6 +34,6 @@ This certification bridges the gap between traditional electronics and modern co
 Below is the verified certificate of completion awarded for this technical achievement.
 
 ![Python Using AI Certificate](./Certificate.png)
-*Figure 1: Official Certificate awarded to Anvita Pranjal for completing the Python Using AI Workshop.*
+
 
 ---
