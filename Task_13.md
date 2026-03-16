@@ -39,6 +39,6 @@ I used the DSO to verify my mathematical design against the actual physical outp
 ### 5. Technical Skills Gained
 * **RC Timing:** Understanding how Resistors and Capacitors control the speed (frequency) of a circuit.
 * **DSO Proficiency:** Learning how to capture and measure high-speed signals on an oscilloscope.
-* **Hardware Debugging:** Identifying that real components have "tolerances" (small errors), which required me to swap a resistor to get exactly 60%.
+
 
 ---
