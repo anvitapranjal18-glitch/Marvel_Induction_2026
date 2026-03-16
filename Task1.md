@@ -1,4 +1,4 @@
-# 🦈 Task 1: 3D Printing & Thin-Film Geometry Calibration
+# 🦈 Task 1: 3D Printing
 
 ---
 
