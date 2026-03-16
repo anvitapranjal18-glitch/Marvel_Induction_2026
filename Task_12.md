@@ -24,6 +24,5 @@ The core objective of this task was to master the fundamental skill of **Solderi
 | **Wetting**           | Solder flows smoothly onto the pad. | Solder sits on top of the pad like a bead. |
 | **Mechanical**        | Zero movement when wiggled.         | Lead moves independently of the solder.    |
 
-### **Technical Skills Gained**
 
-- **🔥 Thermal Management:**
+
