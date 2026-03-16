@@ -32,21 +32,21 @@
 | Task | Title | Documentation |
 | :--- | :--- | :--- |
 | **Task 1** | Task 1: 3D Printing & Design| [View Report](./Task_01.md) |
-| **Task 2** | Weather API Integration | [View Report](./Task2.md) |
-| **Task 3** | Git & GitHub Workflow | [View Report](./Task3.md) |
-| **Task 4** | Ubuntu CLI & Automation | [View Report](./Task4.md) |
+| **Task 2** | Weather API Integration | [View Report](./Task_02.md) |
+| **Task 3** | Git & GitHub Workflow | [View Report](./Task_03.md) |
+| **Task 4** | Ubuntu CLI & Automation | [View Report](./Task_04.md) |
 | **Task 5** | **Live Portfolio Website** | [**Visit Live Site**](https://anvitapranjal18-glitch.github.io/Marvel_Induction_2026/) |
-| **Task 6** | Technical Writing (Markdown) | [View Article](./Task6.md) |
-| **Task 7** | Ultrasonic Radar System | [View Simulation](./Task7.md) |## 🚀 Task 5: Professional Portfolio
-| **Task 8** | DC Motor Speed Control | [View Report](./Task8.md) |
-| **Task 9** | ESP32 LED Toggle | [View Report](./Task9.md) |
-| **Task 10** | Soldering Prerequisites | [View Report](./Task10.md) |
-| **Task 11** | 555 Astable Multivibrator | [View Report](./Task11.md) |
-| **Task 12** | K-Map Burglar Alarm | [View Report](./Task12.md) |
-| **Task 13** | L293D Datasheet Analysis | [View Report](./Task13.md) |
-| **Task 14** | Introduction to VR | [View Report](./Task14.md) |
-| **Task 15** | Linux Forensics (SadServers) | [View Report](./Task15.md) |
-| **Task 16** | Flask/Web App Development | [View Report](./Task16.md) |
+| **Task 6** | Technical Writing (Markdown) | [View Article](./Task_06.md) |
+| **Task 7** | Ultrasonic Radar System | [View Simulation](./Task_07.md) |## 🚀 Task 5: Professional Portfolio
+| **Task 8** | DC Motor Speed Control | [View Report](./Task_08.md) |
+| **Task 9** | ESP32 LED Toggle | [View Report](./Task_09.md) |
+| **Task 10** | Soldering Prerequisites | [View Report](./Task_10.md) |
+| **Task 11** | 555 Astable Multivibrator | [View Report](./Task_11.md) |
+| **Task 12** | K-Map Burglar Alarm | [View Report](./Task_12.md) |
+| **Task 13** | L293D Datasheet Analysis | [View Report](./Task_13.md) |
+| **Task 14** | Introduction to VR | [View Report](./Task_14.md) |
+| **Task 15** | Linux Forensics (SadServers) | [View Report](./Task_15.md) |
+| **Task 16** | Flask/Web App Development | [View Report](./Task_16.md) |
 
 ---For the final task, I developed a responsive portfolio website to showcase my skills, interests, and the work I completed during this induction.
 
