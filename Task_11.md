@@ -38,7 +38,3 @@ Below are images showing the physical setup from the lab, as referenced in the d
 2. **The Server:** The ESP32 hosts a tiny web page. Typing the **IP Address** into a phone's browser shows "ON" and "OFF" buttons.
 3. **The Trigger:** Clicking a button sends a request. The ESP32 receives it and sends electricity (HIGH signal) to **GPIO Pin 2**, lighting the LED.
 
-### 6. Senior Summary (What to Say)
-> "In Task 11, I built a wireless light switch. I programmed the ESP32 to connect to my Wi-Fi and host a simple website. When I clicked the buttons on my phone screen, the ESP32 received the command and toggled the **GPIO Pin 2** (the signal pin) and used the **GND** (yellow wire) for the return path to successfully turn the LED on or off."
-
----
