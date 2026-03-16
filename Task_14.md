@@ -2,8 +2,7 @@
 
 ### **Description**
 
-The core objective of this task was to design a functional **Burglar Alarm System** by applying Boolean algebra and **Karnaugh Map (K-Map)** optimization. The system logic was based on two inputs: a **Door Sensor** (Open/Closed) and a **Key Switch** (Pressed/Not Pressed). By deriving the minimal logical expression for the alarm condition, I implemented the circuit using standard **TTL logic gates** to trigger a buzzer or LED only when specific security breaches occurred. This task emphasizes the process of converting real-world conditions into a digital truth table and an optimized hardware gate layout.
-
+The core objective of this task was to design a functional **Burglar Alarm System** by applying Boolean algebra and **Karnaugh Map (K-Map)** optimization. The system logic was based on two inputs: a **Door Sensor** (Open/Closed) and a **Key Switch** (Pressed/Not Pressed). By deriving the minimal logical expression for the alarm condition.
 ### **Detailed Process**
 
 - **Logic Mapping (Truth Table):** I defined two binary inputs: $D$ (Door: 0=Closed, 1=Open) and $K$ (Key: 0=Not Pressed, 1=Pressed). The Alarm ($A$) should only trigger if the door is opened _without_ the key being pressed.
