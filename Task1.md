@@ -38,15 +38,10 @@ For a flat, thin object like a bookmark, these "Golden Settings" ensure the prin
 
 ---
 
-### 📊 5. Post-Print Analysis
-* **✅ Dimensional Accuracy:** The bookmark is thin enough to fit between pages but strong enough not to bend permanently.
-* **🧲 Bed Adhesion:** The "Tail" and "Fins" segments stayed perfectly flat with zero corner lifting.
-* **📏 Surface Quality:** The top layer is smooth and "closed," indicating that the **Top Surface Skin** settings were correctly calibrated.
 
 
 
-
-### 6. Post-Print Analysis
+### 5. Post-Print Analysis
 
 * **Articulation Check:** All segments (head, body, tail) move smoothly. The joints did not fuse.
 * **Bed Adhesion:** No "warping" was observed, and even the smallest tail segments remained attached until the print was complete.
