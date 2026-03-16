@@ -26,14 +26,14 @@ By plotting the Truth Table into a 2-variable K-Map, we identify the single cell
 
 **Final Boolean Expression:** $$A = D \cdot \overline{K}$$
 
-![K-Map Analysis](Task14_KMap_Analysis.png)
+![K-Map Analysis](Task14_KMap_Analysis.jpeg)
 
 ---
 
 ### 3. 🔌 Logic.ly Simulation
 The circuit was simulated in **Logic.ly** to verify the mathematical model. The design uses a **NOT Gate** to invert the Key signal and an **AND Gate** to process the alarm condition.
 
-![Logic.ly Simulation States](Task14_Simulation_States.png)
+![Logic.ly Simulation States](Task14_Simulation_States.jpeg)
 
 **Simulation Observations:**
 * **Authorized Entry:** When Door is ON and Key is ON, the AND gate receives (1, 0), so the Alarm remains **OFF**.
