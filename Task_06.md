@@ -30,4 +30,3 @@ When a user enters a URL, the browser initiates a **Recursive DNS Lookup**. This
 * **Information Architecture:** Mastering the art of breaking down complex system designs into digestible sections.
 
 ---
-*Created for MARVEL Induction | UVCE ECE 2nd Sem*
