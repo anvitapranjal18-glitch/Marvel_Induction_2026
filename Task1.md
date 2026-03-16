@@ -1,4 +1,4 @@
-# 🦈 Task 1: 3D Printing
+# Task 1: 3D Printing
 
 ---
 
@@ -7,8 +7,7 @@ To master the **FDM (Fused Deposition Modeling)** workflow by printing a **Shark
 
 ---
 
-### 2. 📚 The Model: Shark Bookmark
-* **Purpose:** To verify first-layer consistency, surface smoothness, and "Z-height" precision.
+### 2. 📚 The Model: Shark Bookmark.
 * **Design:** A functional, low-profile bookmark featuring a shark silhouette. It requires a perfectly level bed because even a 0.1mm tilt would make one side of the bookmark thicker than the other.
 * **Challenge:** Because the model is wide and thin, it is highly susceptible to **warping** (corners peeling up) as the plastic cools.
 
