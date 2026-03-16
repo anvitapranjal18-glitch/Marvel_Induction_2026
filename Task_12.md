@@ -35,7 +35,3 @@ To ensure every joint meets the highest quality standards, the following sequenc
 
 ---
 
-### 📊 5. Post-Soldering Analysis
-* **Lead Trimming:** Used diagonal flush cutters to snip excess leads just above the solder cone.
-* **Reflow & Cleanup:** Any bulbous joints were reheated to "reflow" the solder. Accidental bridges were cleared using a **Desoldering Pump**.
-* **Integrity Check:** Performed a visual audit using a magnifying glass to ensure zero "Dry Joints" or "Short Circuits."
