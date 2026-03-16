@@ -26,14 +26,14 @@ By plotting the Truth Table into a 2-variable K-Map, we identify the single cell
 
 **Final Boolean Expression:** $$A = D \cdot \overline{K}$$
 
-![K-Map Analysis](INSERT_IMAGE_1_HERE)
+![K-Map Analysis](Task14_KMap_Analysis.png)
 
 ---
 
 ### 3. 🔌 Logic.ly Simulation
 The circuit was simulated in **Logic.ly** to verify the mathematical model. The design uses a **NOT Gate** to invert the Key signal and an **AND Gate** to process the alarm condition.
 
-![Logic.ly Simulation States](INSERT_IMAGE_2_HERE)
+![Logic.ly Simulation States](Task14_Simulation_States.png)
 
 **Simulation Observations:**
 * **Authorized Entry:** When Door is ON and Key is ON, the AND gate receives (1, 0), so the Alarm remains **OFF**.
@@ -45,10 +45,3 @@ The circuit was simulated in **Logic.ly** to verify the mathematical model. The 
 * **Combinational Logic:** Implementing real-world constraints using **AND** and **NOT** gates.
 * **Circuit Optimization:** Using K-Maps to ensure the design uses the minimum number of gates possible.
 * **Simulation Testing:** Validating theoretical Boolean expressions through digital software before hardware implementation.
-
----
-
-### 🚀 Senior Demo Quick-Reference
-* **The Math:** $A = D \cdot \overline{K}$
-* **The Logic:** The NOT gate acts as the "Key Check." If the key is missing (0), the NOT gate flips it to a 1, allowing the AND gate to fire if the door is also opened (1).
-* **The Gates:** Uses one **7404 (NOT)** and one **7408 (AND)** IC in a physical setup.
