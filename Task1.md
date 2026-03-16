@@ -1,38 +1,47 @@
-# Task 1: 3D Printing & Articulated Motion Calibration
+# 🦈 Task 1: 3D Printing & Thin-Film Geometry Calibration
 
-### 1. Objective
-To master the FDM (Fused Deposition Modeling) workflow by printing a **Flexi-Rex** (Articulated T-Rex). This project serves as a test for the printer’s ability to handle small clearances, ensuring that moving segments do not fuse together during the extrusion process.
+---
 
-### 2. The Model: Flexi-Rex
-* **Purpose:** To verify printer tolerances, bed adhesion for small footprints, and cooling efficiency.
-* **Design:** A "Print-in-Place" model with interlocking joints that move freely immediately after printing.
-* **Source:** Thingiverse / Printables.
+### 1. 🎯 Objective
+To master the **FDM (Fused Deposition Modeling)** workflow by printing a **Shark Bookmark** (`bookshark.stl`). This project serves as a test for the printer’s ability to handle very thin layers and maintain a perfectly flat profile without warping.
 
-### 3. Slicing Parameters (Ultimaker / Creality Slicer)
-For an articulated print, the "Golden Settings" focus on strength and preventing joint fusion.
+---
+
+### 2. 📚 The Model: Shark Bookmark
+* **Purpose:** To verify first-layer consistency, surface smoothness, and "Z-height" precision.
+* **Design:** A functional, low-profile bookmark featuring a shark silhouette. It requires a perfectly level bed because even a 0.1mm tilt would make one side of the bookmark thicker than the other.
+* **Challenge:** Because the model is wide and thin, it is highly susceptible to **warping** (corners peeling up) as the plastic cools.
+
+---
+
+### 3. ⚙️ Slicing Parameters (Golden Settings)
+For a flat, thin object like a bookmark, these "Golden Settings" ensure the print is durable and perfectly flat.
 
 | Parameter | Value | Reason |
 | :--- | :--- | :--- |
-| **Layer Height** | 0.2 mm | Standard balance; keeps joint gaps clean. |
-| **Wall Line Count** | 3 | Increases the structural integrity of the small joint links. |
-| **Infill Density** | 15% | Provides enough internal support without excessive weight. |
-| **Print Speed** | 45 mm/s | Reduced speed prevents vibration-induced errors on small parts. |
-| **Printing Temp** | 200°C | Optimal flow for PLA to prevent stringing between joints. |
-| **Build Plate Temp** | 60°C | Ensures the small segments (feet/tail) stay stuck to the bed. |
-| **Initial Layer Speed**| 20 mm/s | Guarantees a strong "foundation" for the articulated parts. |
+| **Layer Height** | 0.2 mm | Standard balance; ensures the bookmark is thin but strong. |
+| **Wall Line Count** | 3 | Strengthens the outer "skin" of the shark shape. |
+| **Infill Density** | 100% | Since it is very thin, 100% infill makes it solid and less likely to snap. |
+| **Print Speed** | 50 mm/s | Balanced speed for a smooth top-surface finish. |
+| **Printing Temp** | 200°C | Optimal flow for PLA to ensure the layers bond perfectly. |
+| **Build Plate Temp** | 60°C | Keeps the wide, flat base from peeling off the bed. |
+| **Initial Layer Speed**| 15 mm/s | Extra slow start to guarantee the "tail" and "fins" stick perfectly. |
 
 ---
 
-### 4. Step-by-Step Workflow
-
-1. **File Preparation:** Imported `FlexiRex.stl` into the Slicer. Checked the "Slice Preview" to confirm that the gaps between the joints were visible.
-2. **G-Code Generation:** Exported the `.gcode` to a microSD card.
-3. **Printer Setup:** Thoroughly cleaned the bed with IPA (Isopropyl Alcohol). Since the Flexi-Rex has many small contact points, even a fingerprint can cause a part to peel off.
-4. **Bed Leveling:** Verified the "Z-offset" was perfect to ensure the first layer squish was sufficient for the tiny leg segments.
-5. **Execution:** Started the print and monitored the first 3 layers (the most critical phase for articulated models).
+### 🛠️ 4. Step-by-Step Workflow
+* **📂 File Preparation:** Imported `bookshark.stl` into the Slicer. I used the **"Rotate"** tool to ensure it was laying completely flat on the virtual bed.
+* **💾 G-Code Generation:** Processed the file and saved the `.gcode` to the microSD card.
+* **🧼 Printer Setup:** Cleaned the build plate with **IPA (Isopropyl Alcohol)**. For flat objects, any finger grease can cause the corners to lift (warp).
+* **📐 Bed Leveling:** Performed a precise **4-point leveling** check. For a bookmark, the "Z-offset" must be perfect across the entire surface.
+* **🚀 Execution:** Started the print and watched the first layer closely. If the first layer looks like "transparent tape," the nozzle is too close; if it looks like "round spaghetti," it is too high.
 
 ---
 
+### 📊 5. Post-Print Analysis
+* **✅ Dimensional Accuracy:** The bookmark is thin enough to fit between pages but strong enough not to bend permanently.
+* **🧲 Bed Adhesion:** The "Tail" and "Fins" segments stayed perfectly flat with zero corner lifting.
+* **📏 Surface Quality:** The top layer is smooth and "closed," indicating that the **Top Surface Skin** settings were correctly calibrated.
 
 
 
