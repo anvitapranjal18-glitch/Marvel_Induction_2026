@@ -2,18 +2,18 @@
 
 ---
 
-### 1. 🎯 Objective
+### 1.  Objective
 To master the **FDM (Fused Deposition Modeling)** workflow by printing a **Shark Bookmark** (`bookshark.stl`). This project serves as a critical test for the printer’s ability to handle very thin layers and maintain a perfectly flat profile without warping.
 
 ---
 
-### 2. 📚 The Model: Shark Bookmark
+### 2.  The Model: Shark Bookmark
 * **Design:** A functional, low-profile bookmark featuring a shark silhouette. It requires a perfectly level bed because even a 0.1mm tilt would make one side of the bookmark thicker than the other.
 * **Challenge:** Because the model is wide and thin, it is highly susceptible to **warping** (corners peeling up) as the plastic cools and shrinks.
 
 ---
 
-### 3. ⚙️ Slicing Parameters (Golden Settings)
+### 3.  Slicing Parameters (Golden Settings)
 For a flat, thin object like a bookmark, these "Golden Settings" ensure the print is durable and perfectly flat.
 
 | Parameter | Value | Reason |
@@ -28,7 +28,7 @@ For a flat, thin object like a bookmark, these "Golden Settings" ensure the prin
 
 ---
 
-### 🛠️ 4. Technical Procedure & Hardware Mechanism
+### 4. Technical Procedure & Hardware Mechanism
 
 **A. The Hardware "Guts":**
 The 3D printing process follows a specific mechanical path:
@@ -41,10 +41,10 @@ The 3D printing process follows a specific mechanical path:
 
 
 **B. Step-by-Step Workflow:**
-* **📂 File Preparation:** Imported `bookshark.stl` into the Slicer. I used the **Rotate** tool to ensure it was laying completely flat on the virtual bed.
-* **💾 G-Code Generation:** Processed the file to create layer-by-layer instructions and saved them to the microSD card.
-* **🧼 Printer Setup:** Thoroughly cleaned the build plate with **IPA (Isopropyl Alcohol)**. For thin objects, removing finger oils is the primary way to **prevent warping**.
-* **🚀 Execution:** Started the print and monitored the first layer. I ensured a "perfect squish"—where the plastic lines are flat and touching, creating a solid foundation.
+* ** File Preparation:** Imported `bookshark.stl` into the Slicer. I used the **Rotate** tool to ensure it was laying completely flat on the virtual bed.
+* ** G-Code Generation:** Processed the file to create layer-by-layer instructions and saved them to the microSD card.
+* ** Printer Setup:** Thoroughly cleaned the build plate with **IPA (Isopropyl Alcohol)**. For thin objects, removing finger oils is the primary way to **prevent warping**.
+* **Execution:** Started the print and monitored the first layer. I ensured a "perfect squish"—where the plastic lines are flat and touching, creating a solid foundation.
 
 ---
 
