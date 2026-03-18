@@ -44,11 +44,7 @@ The 3D printing process follows a specific mechanical path:
 * **📂 File Preparation:** Imported `bookshark.stl` into the Slicer. I used the **Rotate** tool to ensure it was laying completely flat on the virtual bed.
 * **💾 G-Code Generation:** Processed the file to create layer-by-layer instructions and saved them to the microSD card.
 * **🧼 Printer Setup:** Thoroughly cleaned the build plate with **IPA (Isopropyl Alcohol)**. For thin objects, removing finger oils is the primary way to **prevent warping**.
-* **📐 Bed Leveling:** Performed a precise **4-point leveling** check to ensure the **Z-offset** was uniform across the entire surface.
 * **🚀 Execution:** Started the print and monitored the first layer. I ensured a "perfect squish"—where the plastic lines are flat and touching, creating a solid foundation.
 
 ---
 
-### 📊 5. Post-Print Analysis
-* **✅ Dimensional Accuracy:** The bookmark is thin enough to fit between pages but strong enough to remain flexible without snapping.
-* **🧲 Bed Adhesion:** No **warping** was observed; the fins and tail remained perfectly flat against the bed throughout the print.
