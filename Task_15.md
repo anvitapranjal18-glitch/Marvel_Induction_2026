@@ -10,9 +10,9 @@ To demonstrate a commitment to lifelong learning and professional growth by comp
 
 
 **Key Skills Mastered:**
-* **AI-Driven Coding:** Learning to write Python code efficiently using AI tools[cite: 9].
-* **Automated Debugging:** Utilizing AI to identify and fix code errors in seconds[cite: 8].
-* **Data Visualization:** Creating interactive and insightful visualizations in Python[cite: 7].
+* **AI-Driven Coding:** Learning to write Python code efficiently using AI tools
+* **Automated Debugging:** Utilizing AI to identify and fix code errors in seconds
+* **Data Visualization:** Creating interactive and insightful visualizations in Python
 
 ---
 
