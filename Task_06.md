@@ -24,7 +24,7 @@ When a user enters a URL, the browser initiates a **Recursive DNS Lookup**. This
 
 ---
 
-# 🤖 Understanding Embedded Systems: The Brains of Modern Electronics
+#  Understanding Embedded Systems: The Brains of Modern Electronics
 
 ### **1. Introduction**
 An **Embedded System** is a dedicated computer system designed to perform one or a few specific functions, often with real-time computing constraints. Unlike a general-purpose computer (like your laptop) which can run thousands of different programs, an embedded system is "embedded" as part of a complete device including hardware and mechanical parts.
