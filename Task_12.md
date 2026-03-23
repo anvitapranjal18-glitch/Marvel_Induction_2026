@@ -2,7 +2,7 @@
 
 ---
 
-### 1. 🎯 Objective
+### 1.  Objective
 To master the skill of **Through-Hole Soldering**, transitioning from temporary breadboard prototypes to permanent, production-ready electronic hardware. This task focuses on creating high-reliability electrical joints and understanding the chemistry of thermal bonding.
 
 ---
@@ -14,7 +14,7 @@ To master the skill of **Through-Hole Soldering**, transitioning from temporary 
 
 ---
 
-### 3. 📉 The Four-Step Soldering Cycle
+### 3. The Four-Step Soldering Cycle
 To ensure every joint meets the highest quality standards, the following sequence was followed:
 
 1.  **Heat:** Place the iron tip at the junction of the component lead and the PCB pad for 1-2 seconds.
@@ -24,7 +24,7 @@ To ensure every joint meets the highest quality standards, the following sequenc
 
 ---
 
-### 4. ✅ Quality Audit Standards
+### 4.  Quality Audit Standards
 
 | Feature | **Ideal Joint (Shiny/Volcano)** | **Defective Joint (Cold/Bridge)** |
 | :--- | :--- | :--- |
