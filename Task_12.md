@@ -7,7 +7,7 @@ To master the skill of **Through-Hole Soldering**, transitioning from temporary 
 
 ---
 
-### 2. 🛠️ Workstation & Preparation
+### 2.  Workstation & Preparation
 * **Iron Calibration:** Set to **350°C** to ensure rapid melting without damaging the PCB's copper pads.
 * **Tip Tinning:** Applied a fresh layer of solder to the tip to prevent oxidation and create a **"Thermal Bridge"** for instant heat flow.
 * **Clinch Technique:** Bending component leads at a 45° angle to hold them flush against the PCB before soldering.
