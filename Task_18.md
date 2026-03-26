@@ -37,9 +37,9 @@ The core objective of this task was to resolve "The Command Line Murders," a sop
 
 ### **Technical Skills Gained**
 
-- **📂 Advanced File Navigation:** Mastery of `ls -R`, `cd`, and `tree` for mapping complex, multi-layered directory hierarchies.
-- **🛠️ Text Processing Pipeline:** Professional use of `grep`, `sed`, and `awk` to filter, transform, and extract specific data points from large text blocks.
-- **🔗 Stream Redirection:** Deep understanding of using pipes (`|`) to connect modular commands, allowing for high-speed data analysis without temporary files.
-- **🧠 Forensic Logic:** Developing a systematic approach to system audits, treating terminal data as a sequence of traceable events.
+- ** Advanced File Navigation:** Mastery of `ls -R`, `cd`, and `tree` for mapping complex, multi-layered directory hierarchies.
+- ** Text Processing Pipeline:** Professional use of `grep`, `sed`, and `awk` to filter, transform, and extract specific data points from large text blocks.
+- ** Stream Redirection:** Deep understanding of using pipes (`|`) to connect modular commands, allowing for high-speed data analysis without temporary files.
+- ** Forensic Logic:** Developing a systematic approach to system audits, treating terminal data as a sequence of traceable events.
 
 ---
