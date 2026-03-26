@@ -2,7 +2,7 @@
 
 ---
 
-### 1. The Main Gist (The "Water Tank" Idea)
+### 1. The Main Working
 The 555 Timer in **Astable Mode** acts like a self-filling and self-draining water tank. It has no "stable" state, so it constantly flips between ON and OFF.
 * **The Capacitor ($10\mu F$):** This is the "tank" that stores electrical charge.
 * **The Resistors ($R_A, R_B$):** These are the "valves." They control how fast the tank fills up and how fast it drains out.
@@ -37,18 +37,7 @@ To calculate the timing, we use the constant **0.693** (which is the natural log
 
 ---
 
-### 4. Observations & Results
-Using the formulas above, I chose $R_B \approx 2R_A$ to reach my **60% Duty Cycle** goal. I verified the results using a **Digital Storage Oscilloscope (DSO)**.
-
-| Parameter | Design Target | Measured Value (DSO) |
-| :--- | :--- | :--- |
-| **Duty Cycle** | 60% | **60.4%** |
-| **Supply Voltage** | 5V | **4.98V** |
-| **Waveform** | Square Wave | **Confirmed** |
 
 ---
 
-### 5. Technical Skills Gained
-* **RC Timing:** Learned how resistors and capacitors work together to create specific time delays.
-* **Logic Thresholds:** Understood how the $1/3$ and $2/3$ voltage levels control the state of a circuit.
-* **DSO Measurement:** Mastered capturing real-time waveforms to prove the math works in the real world.
+
