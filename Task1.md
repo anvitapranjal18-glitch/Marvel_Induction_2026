@@ -10,7 +10,7 @@ To master the **FDM (Fused Deposition Modeling)** workflow by printing a **Shark
 * **Design:** A functional, low-profile bookmark featuring a shark silhouette. 
 
 
-![Finished Shark Bookmark](task1_shark_bookmark.jpg)
+![Finished Shark Bookmark](https://github.com/anvitapranjal18-glitch/Marvel_Induction_2026/raw/main/task1_shark_bookmark.jpg)
 
 ---
 
