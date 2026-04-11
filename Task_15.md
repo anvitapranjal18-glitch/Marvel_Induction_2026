@@ -20,7 +20,7 @@ To demonstrate a commitment to lifelong learning and professional growth by comp
 ### 2. Evidence of Participation
 Below is the verified certificate of completion awarded for this technical achievement.
 
-![Python Using AI Certificate](./Certificate.png)
+![MY CERTIFICATE](https://github.com/anvitapranjal18-glitch/Marvel_Induction_2026/blob/main/Certificate.png?raw=true)
 
 
 ---
