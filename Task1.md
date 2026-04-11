@@ -11,7 +11,7 @@ To master the **FDM (Fused Deposition Modeling)** workflow by printing a **Shark
 * **Design:** A functional, low-profile bookmark featuring a shark silhouette. 
 * **Challenge:** High susceptibility to **warping** (corners peeling up) as the plastic cools.
 
-![Finished Shark Bookmark](file:///Users/macbookpro/Downloads/task1_shark_bookmark.jpg)
+![Finished Shark Bookmark](task1_shark_bookmark.jpg)
 
 ---
 
