@@ -1,20 +1,21 @@
-#  Task 1: 3D Printing & Thin-Film Geometry Calibration
+# Task 1: 3D Printing & Thin-Film Geometry Calibration
 
 ---
 
-### 1.  Objective
+### 1. Objective
 To master the **FDM (Fused Deposition Modeling)** workflow by printing a **Shark Bookmark** (`bookshark.stl`). This project serves as a critical test for the printer’s ability to handle very thin layers and maintain a perfectly flat profile without warping.
 
 ---
 
-### 2.  The Model: Shark Bookmark
-* **Design:** A functional, low-profile bookmark featuring a shark silhouette. It requires a perfectly level bed because even a 0.1mm tilt would make one side of the bookmark thicker than the other.
-* **Challenge:** Because the model is wide and thin, it is highly susceptible to **warping** (corners peeling up) as the plastic cools and shrinks.
+### 2. The Model: Shark Bookmark
+* **Design:** A functional, low-profile bookmark featuring a shark silhouette. 
+* **Challenge:** High susceptibility to **warping** (corners peeling up) as the plastic cools.
+
+![Finished Shark Bookmark](file:///Users/macbookpro/Downloads/task1_shark_bookmark.jpg)
 
 ---
 
-### 3.  Slicing Parameters (Golden Settings)
-For a flat, thin object like a bookmark, these "Golden Settings" ensure the print is durable and perfectly flat.
+### 3. Slicing Parameters (Golden Settings)
 
 | Parameter | Value | Reason |
 | :--- | :--- | :--- |
@@ -32,19 +33,15 @@ For a flat, thin object like a bookmark, these "Golden Settings" ensure the prin
 
 **A. The Hardware "Guts":**
 The 3D printing process follows a specific mechanical path:
-1.  **Extruder:** The motor and gear assembly that grips the filament and pushes it forward.
-2.  **Hot End:** The heating element that melts the solid plastic into a liquid state (200°C).
-3.  **Nozzle:** The 0.4mm tip that "draws" the melted plastic onto the bed.
-4.  **Cooling Fan:** Instantly hardens the plastic so the next layer can sit on top.
-5.  **Stepper Motors:** Move the nozzle along the **X, Y, and Z axes** based on the G-Code.
+1. **Extruder:** Grips and pushes filament.
+2. **Hot End:** Melts plastic (200°C).
+3. **Nozzle:** 0.4mm tip for precision.
+4. **Cooling Fan:** Hardens plastic instantly.
 
-
+![Printer Hardware Setup](PASTE_YOUR_DIRECT_LINK_FOR_THE_PRINTER_PHOTO_HERE)
 
 **B. Step-by-Step Workflow:**
-* ** File Preparation:** Imported `bookshark.stl` into the Slicer. I used the **Rotate** tool to ensure it was laying completely flat on the virtual bed.
-* ** G-Code Generation:** Processed the file to create layer-by-layer instructions and saved them to the microSD card.
-* ** Printer Setup:** Thoroughly cleaned the build plate with **IPA (Isopropyl Alcohol)**. For thin objects, removing finger oils is the primary way to **prevent warping**.
-* **Execution:** Started the print and monitored the first layer. I ensured a "perfect squish"—where the plastic lines are flat and touching, creating a solid foundation.
-
----
-
+* **File Preparation:** Imported `bookshark.stl` and rotated it to lay flat.
+* **G-Code Generation:** Created layer-by-layer instructions.
+* **Printer Setup:** Cleaned the build plate with **IPA** to prevent warping.
+* **Execution:** Monitored for a "perfect squish" on the first layer.
