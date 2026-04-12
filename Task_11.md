@@ -5,7 +5,7 @@
 ### 1. Objective
 To control an LED wirelessly from a phone or laptop. The ESP32 hosts a simple website; clicking buttons on the site sends a signal to the ESP32 to turn the LED on or off.
 
-### 2. The Components (The Team)
+### 2. The Components 
 * **ESP32:** The "brain" with built-in Wi-Fi. It runs the website.
 * **LED:** The light we want to control .
 * **Resistor:** Limits electricity to protect the LED .
