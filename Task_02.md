@@ -27,28 +27,17 @@ An **API (Application Programming Interface)** acts as a digital bridge between 
 
 ---
 
-### 5. Visual Evidence (Proof of Work)
+
 
 #### A. Source Code Structure
 *Below is the HTML and JavaScript implementation across multiple segments.*
-![Code Part 1](./code1.png) 
-![Code Part 2](./code2.png) 
+![Code Part 1](https://raw.githubusercontent.com/anvitapranjal18-glitch/Marvel_Induction_2026/main/code1.png)
+![Code Part 2](https://raw.githubusercontent.com/anvitapranjal18-glitch/Marvel_Induction_2026/main/code2.png)
 
 #### B. Functional User Interface
 *The app successfully fetching and displaying live weather data.*
-![App UI](./weather_app.png)
+![App UI](https://raw.githubusercontent.com/anvitapranjal18-glitch/Marvel_Induction_2026/main/weather_app.png)
 
-#### C. API Network Response (Developer Tools)
-*This proves the real-time data exchange between the browser and the API server.*
-![Network Part 1](./network1.png)
-![Network Part 2](./network2.png)
 
 ---
 
-### 6. Challenges & Solutions
-* **Challenge:** Handling invalid city names or API errors.
-* **Solution:** Implemented a `try...catch` block in JavaScript to alert the user if a city is not found.
-* **Challenge:** The temperature unit was default to Kelvin.
-* **Solution:** Appended `&units=metric` to the API request to receive data in Celsius automatically.
-
----
