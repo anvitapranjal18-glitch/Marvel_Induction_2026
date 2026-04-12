@@ -12,19 +12,10 @@ To control an LED wirelessly from a phone or laptop. The ESP32 hosts a simple we
 * **USB Cable:** Provides power and uploads the code .
 ---
 
-### 3. Connections 
 
-
-| Connection | Wires | Where they go |
-| :--- | :--- | :--- |
-| **Signal (ON/OFF)** | Brown Wires | ESP32 GPIO 2 $\rightarrow$ LED Long Leg |
-| **Return Path (GND)**| Yellow Wire | ESP32 GND $\rightarrow$ Breadboard $\rightarrow$ LED Short Leg |
-| **Protection** | Resistor | Between LED and wires (prevents burnout) |
-
----
 
 ### 4. Lab Setup Visualization
-Below are images showing the physical setup from the lab.
+Below is the  image showing the physical setup from the lab.
 
 ![Complete Lab Setup and Laptop](https://github.com/anvitapranjal18-glitch/Marvel_Induction_2026/raw/main/lab_setup.jpg)
 
