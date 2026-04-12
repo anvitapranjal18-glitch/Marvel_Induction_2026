@@ -18,24 +18,19 @@ To master the professional software development lifecycle, focusing on local dev
 
 #### A. Terminal Operations & Git Commands
 *Demonstrating the use of Git CLI to clone, commit, and push changes from a MacBook Pro terminal.*
-![Terminal Proof](./marvel-github-4.jpg)
+![Terminal](https://raw.githubusercontent.com/anvitapranjal18-glitch/Marvel_Induction_2026/main/marvel-github-4.jpg)
 
 #### B. The Bug Fix (Code Diff)
 *Showing the exact logic change in `main.py`: removing the unnecessary `+ 1` from the return statement.*
-![Code Fix Proof](./marvel%20github-3.jpg)
+![Code Fix ](https://raw.githubusercontent.com/anvitapranjal18-glitch/Marvel_Induction_2026/main/marvel%20github-3.jpg)
 
 #### C. Commit History
 *A record of the iterative changes made to resolve the addition function bug.*
-![Commit Proof](./marvel%20github-2.jpg)
+![Commit ](https://raw.githubusercontent.com/anvitapranjal18-glitch/Marvel_Induction_2026/main/marvel%20github-2.jpg)
 
 #### D. Official Pull Request
 *The final submission of the fixed code to the UVCE-Marvel organization (PR #247).*
-![PR Proof](./Marvel-github.jpg)
+![PR Proof](https://raw.githubusercontent.com/anvitapranjal18-glitch/Marvel_Induction_2026/main/Marvel-github.jpg)
 
 ---
 
-### 4. Challenges & Solutions
-* **Challenge:** Ensuring the local commits were properly pushed to the correct remote branch.
-* **Solution:** Verified the remote origin using `git remote -v` and ensured the branch tracking was correctly set to `main`.
-* **Challenge:** Passing the automated GitHub Actions checks.
-* **Solution:** By removing the `+ 1` logic error, the automated test suite was able to validate the function correctly.
